@@ -1,0 +1,72 @@
+//header
+$header-border: #999;
+
+// base
+$brand: #3d55a4;
+$header: #666;
+$subHeaders: #eee;
+$text: #333;
+$text-color: #333;
+$error: #e23535;
+$background:#e9d6b6;
+
+$off-white: #fafafa;
+$white: #fff;
+
+
+// greys
+$black: #222;
+$darkgrey: #333;
+$grey: #464646;
+$lightgrey: #ddd;
+
+
+// site
+$red: #ba0000;
+$green: #6fc650;
+$blue: #4e92ec;
+$dark-blue: #073a79;
+$orange: #ff8e21;
+$yellow: #f2e873;
+$light-yellow: #fff9c4;
+$dark-yellow: #f57f17;
+
+
+$link: $blue;
+
+
+
+$button-blue: #288ab0;
+$button-blue-border: #23799b;
+$button-blue-hover: #237798;
+$button-blue-hover-border: #1f6986;
+
+$button-green: #1dc59f;
+$button-green-border: #19ad8c;
+$button-green-hover: #1cb893;
+$button-green-hover-border: #19a281;
+
+
+
+/*** Typography ***/
+$off-black: rgba(0, 0, 0, .87) !default;
+// Header Styles
+$h1-fontsize: 4.2rem !default;
+$h2-fontsize: 3.56rem !default;
+$h3-fontsize: 2.92rem !default;
+$h4-fontsize: 2.28rem !default;
+$h5-fontsize: 1.64rem !default;
+$h6-fontsize: 1rem !default;
+
+
+
+$alpha-primary-color-dark:   #D83A46;
+$alpha-primary-color:        #519af6;
+$alpha-primary-color-light:  lighten($alpha-primary-color, 10%);
+$alpha-primary-color-text:   #222222;
+$alpha-accent-color:         #ffc107;
+$alpha-primary-text-color:   #212121;
+$alpha-secondary-text-color: #727272;
+$alpha-divider-color:        #b6b6b6;
+$alpha-primary-shadow:       #305b6d;
+$alpha-header-gradient:      #406FC3;

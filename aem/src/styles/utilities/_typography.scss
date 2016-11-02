@@ -1,0 +1,98 @@
+$base-size: 16;
+$font-family: 'SF UI Text', 'San Francisco', -apple-system, 'Helvetica Neue', Roboto, Arial, Helvetica, sans-serif;
+
+
+//320 by default
+html,
+body {
+  font-family: $font-family;
+  color: $text-color;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+// Header Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark-blue;
+  font-weight: normal;
+  line-height: 110%;
+
+  a { 
+    font-weight: inherit;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  @include media-query(768px) {
+    font-size: $h1-fontsize;
+    margin: 0 0 ($h1-fontsize / 2.5);
+  }
+}
+
+h2 {
+  font-size: 24px;
+  @include media-query(768px) {
+    font-size: $h2-fontsize;
+    margin: 0 0 ($h2-fontsize / 2.5);
+  }
+}
+
+h3 {
+  font-size: $h3-fontsize;
+  margin: ($h3-fontsize / 2) 0 ($h3-fontsize / 2.5);
+}
+
+h4 {
+  font-size: $h4-fontsize;
+  margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5);
+}
+
+h5 {
+  font-size: $h5-fontsize;
+  margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5);
+}
+
+h6 {
+  font-size: $h6-fontsize;
+  margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5);
+}
+
+a {
+  color: $blue;
+  outline: 0;
+  text-decoration: none;
+  transition: color .2s ease-out, border-bottom-color .2s ease-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+
+p {
+  line-height: 1.5em;
+
+  &.large,
+  span.large {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+
+}
+
+.text-right {
+  text-align: right;
+}
+
+.small {
+  font-size: 0.75em;
+}

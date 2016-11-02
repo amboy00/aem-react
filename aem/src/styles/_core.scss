@@ -1,0 +1,21 @@
+$medium: 768px;
+$large: 1024px;
+
+@import
+'../../../node_modules/unsemantic/assets/sass/reset',
+'../../../node_modules/unsemantic/assets/sass/unsemantic-grid-responsive-no-ie7';
+
+@import
+'utilities/variables',
+'utilities/mixins',
+'utilities/xlarge',
+'utilities/typography',
+'utilities/padding',
+'pages/home',
+'modules/header',
+'modules/column1',
+'modules/column2';
+
+img {
+  max-width: 100%
+}

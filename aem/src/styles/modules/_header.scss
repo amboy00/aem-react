@@ -1,0 +1,65 @@
+.header {
+  @include clearfix;
+  border-bottom : 1px solid $header-border;
+  padding: 10px 0;
+
+
+  &__link-home {
+    display: block;
+    width: 150px;
+    height: 60px;
+
+    @include media-query($large) {
+      float: left;
+      width: 50%;
+    }
+
+  }
+
+  &__nav {
+    @include media-query($large) {
+      @include clearfix;
+      float: right;
+      width: 50%;
+      text-align: right;
+    }
+  }
+
+  &__search-form {
+    display: none;
+    @include media-query($large) {
+      display: block;
+      float: right;
+    }
+  }
+}
+
+.nav {
+  &__sign-in {
+    display: inline-block;
+    padding-right: 20px;
+
+    .sign-in__menu {
+      display: none;
+    }
+  }
+
+  &__country {
+    display: inline-block;
+    padding-right: 20px;
+  }
+
+  &__checkout {
+    display: inline-block;
+  }
+}
+
+.search-form {
+  &__fieldset {
+    display: none;
+  }
+
+  &__label {
+    display: none;
+  }
+}

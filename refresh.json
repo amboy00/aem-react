@@ -1,0 +1,20 @@
+{
+  "refresh": [
+    {
+      "template": "1-column",
+      "html": {
+        "image": "/images/image-wide.jpg",
+        "link": "/sale"
+      }
+    },
+    {
+      "template": "2-column",
+      "html": {
+        "image": "/images/image-square.jpg",
+        "link": "/sale2",
+        "image": "/images/image-square.jpg",
+        "link": "/sale2"
+      }
+    }
+  ]
+}

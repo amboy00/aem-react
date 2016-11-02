@@ -1,0 +1,14 @@
+.refresh__column-2 {
+  @include clearfix;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.column-2 {
+  &__div {
+    @include media-query($medium) {
+      width: 50%;
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+$total-padding: 4;
+
+
+@media only screen {
+  @for $x from 0 through $total-padding {
+    @for $y from 0 through $total-padding {
+      .small-padding-#{$x}-#{$y} {
+        padding-top: $x * 1em;
+        padding-bottom: $y * 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  @for $x from 0 through $total-padding {
+    @for $y from 0 through $total-padding {
+      .medium-padding-#{$x}-#{$y} {
+        padding-top: $x * 1em;
+        padding-bottom: $y * 1em;
+      }
+    }
+  }
+}
+
+
+// @media only screen and (min-width: 900px) {
+//   @for $x from 0 through $total-padding {
+//     @for $y from 0 through $total-padding {
+//       .large-padding-#{$x}-#{$y} {
+//         padding-top: $x * 1em;
+//         padding-bottom: $y * 1em;
+//       }
+//     }
+//   }
+// }
