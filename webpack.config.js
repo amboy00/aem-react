@@ -14,32 +14,32 @@ var dashboard = new Dashboard();
 
 const PATHS = {
   app: path.join(__dirname, '/aem/src'),
-  build: path.join(__dirname, '/aem/dist')
-}
+  build: path.join(__dirname, '/aem/dist'),
+};
 
 const common = {
   quiet: true,
   entry: {
-    index: PATHS.app
+    index: PATHS.app,
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss']
+    extensions: ['', '.js', '.jsx', '.scss'],
   },
   output: {
     path: PATHS.build,
-    publicPath: "/dist/",
+    publicPath: '/dist/',
     filename: '[name].js',
-    chunkFilename: '[id].chunk.js'
+    chunkFilename: '[id].chunk.js',
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         loaders: ['babel?cacheDirectory'],
-        include: PATHS.app
-      }
-    ]
-  }
+        include: PATHS.app,
+      },
+    ],
+  },
 };
 
 //
@@ -63,14 +63,14 @@ if (TARGET === 'start' || !TARGET) {
       loaders: [
         {
           test: /\.scss$/,
-          loader: 'style!css!sass'
-        }
-      ]
+          loader: 'style!css!sass',
+        },
+      ],
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      new DashboardPlugin(dashboard.setData)
-    ]
+      new DashboardPlugin(dashboard.setData),
+    ],
   });
 }
 
@@ -83,27 +83,27 @@ if (TARGET === 'build') {
       loaders: [
         {
           test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('css!sass')
-        }
-      ]
+          loader: ExtractTextPlugin.extract('css!sass'),
+        },
+      ],
     },
     plugins: [
       new webpack.optimize.CommonsChunkPlugin({
-        name: "index",
-        minChunks: 2
+        name: 'index',
+        minChunks: 2,
       }),
       new ExtractTextPlugin('[name].css', {
-        allChunks: true
+        allChunks: true,
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
           screw_ie8: true,
-          warnings: false
-        }
+          warnings: false,
+        },
       }),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
-      })
-    ]
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
+      }),
+    ],
   });
 }

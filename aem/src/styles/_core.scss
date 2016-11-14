@@ -8,14 +8,13 @@ $large: 1024px;
 @import
 'utilities/variables',
 'utilities/mixins',
-'utilities/xlarge',
 'utilities/typography',
-'utilities/padding',
 'pages/home',
 'modules/header',
 'modules/column1',
-'modules/column2';
+'modules/column2',
+'modules/slick';
 
 img {
-  max-width: 100%
+  max-width: 100%;
 }

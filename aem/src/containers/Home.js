@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import { fetchHome, fetchRefresh } from '../actions/index';
 import Refresh from '../containers/refresh';
 

@@ -3,22 +3,6 @@ import * as types from './Types';
 
 const ROOT_URL = 'http://demo5258223.mockable.io';
 
-let config = {
-  headers: {
-    'X-API-KEY': '',
-    Token: localStorage.getItem('token'),
-  },
-};
-
-function updateConfig() {
-  config = {
-    headers: {
-      'X-API-KEY': 'zeusapi',
-      Token: localStorage.getItem('token'),
-    },
-  };
-}
-
 export function fetchHome() {
   return dispatch => {
     axios.get(`${ROOT_URL}/home`)
@@ -42,7 +26,7 @@ export function fetchRefresh() {
         dispatch({ type: types.GET_REFRESH, payload: response.data.refresh });
       })
       .catch((error) => {
-        console.log('couldnt get refresh');
+        console.log('couldnt get refresh', error);
       });
   };
 }
